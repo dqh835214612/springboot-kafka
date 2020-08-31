@@ -1,4 +1,4 @@
-package com.example.kafka;
+package com.example.deng;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
