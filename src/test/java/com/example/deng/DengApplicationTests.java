@@ -1,5 +1,7 @@
 package com.example.deng;
 
+import com.example.deng.entity.User;
+import com.example.deng.service.UserService;
 import com.example.deng.zookeeper.zkApi.ZkApi;
 import org.apache.zookeeper.WatchedEvent;
 import org.apache.zookeeper.Watcher;
@@ -12,6 +14,9 @@ class DengApplicationTests {
 
     @Autowired
     private ZkApi zkApi;
+
+    @Autowired
+    private UserService userService;
 
     @Test
     void contextLoads() {
@@ -50,6 +55,12 @@ class DengApplicationTests {
         String path = "/config0";
         String data = "1234";
         zkApi.updateNode(path, data);
+    }
+
+    @Test
+    void getUser () {
+        User user = userService.getUserById(1L);
+        System.out.println(user);
     }
 
 }
