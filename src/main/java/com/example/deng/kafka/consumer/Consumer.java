@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
  * 监听服务器上的kafka是否有相关的消息发过来
  * @date by 2019/08
  */
-@Component
+//@Component
 public class Consumer {
 
     /**
